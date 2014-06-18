@@ -1,19 +1,28 @@
 <div class="container">
-  <% if current_user %>  <%# nice %>
-    <h1> Welcome! </h1>
-    <h2> Stay a while and listen </h2>
-    <h3> Here is a list of all the users so far:</h3>
-    <% @users.each do |u| %>
+  <%# if current_user %>  <%# nice %>
+  <h1> Welcome! </h1>
+  <h2> Stay a while and listen </h2>
+  <h3> Please Input Both your Battletag and your BattleTag code:</h3>
+  <div id="content">
+  <div id="error"></div>
+    <form method="POST" name="battletag_account" id="battletag-entry">
+      <input type="text" placeholder="BattleTag" name="battletag"></input>
+      <input type="text" placeholder="BattleTag Code" name="battletag_code"></input>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+    <!--
+    <%# @users.each do |u| %>
       <ul>
-        <li><%= u.name %></li>
+        <li><%#= u.name %></li>
       </ul>
-    <% end %>
+    <%# end %> -->
 
-    <% else %>
-     <h1> Welcome </h1>
-     <h2> Feel free to log in or create an account!</h2>
+    <!-- <%# else %> -->
+<!--      <h1> Welcome </h1>
+     <h2> Feel free to log in or create an account!</h2> -->
 
-     <% end %>
+     <%# end %>
   <%# TODO:
   1. If user is not signed in - display "Welcome".
   2. If user is signed in then  display all users %>
