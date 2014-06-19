@@ -1,5 +1,18 @@
 <ul>
+  <h4>Here is a list of your heroes:</h4>
   <% @heroes.each do |hero| %>
-    <li><%= hero.name  %></li>
+    <li>Name: <a href="/heroes/<%= hero.id %>"> <%= hero.name  %> </a></li>
+    <ul>
+      <li>Level: <%= hero.level %></li>
+      <li> Gender:
+        <%  if hero.gender == 0 %>
+          <%= "Male" %>
+        <% else %>
+          <%= "Female" %>
+        <% end %>
+      </li>
+      <li>Class: <%= (hero.hero_class).capitalize %></li>
+    </ul>
+    <br>
   <% end %>
 </ul>

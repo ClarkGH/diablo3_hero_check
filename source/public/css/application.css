@@ -1,0 +1,20 @@
+body {
+  color: #33151B;
+  background-color: #F2B872;
+  text-align: center;
+  font-family: 'exocet-light'
+}
+ul {
+  list-style-type: none;
+}
+
+button {
+  color: #F2B872;
+  background-color: #593123;
+}
+
+div .line {
+  height: 1em;
+  width: auto;
+  background-color: #230C0D;
+}
