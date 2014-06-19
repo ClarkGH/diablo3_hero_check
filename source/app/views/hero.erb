@@ -1,4 +1,5 @@
 <div name='hero_attributes'>
+  <h1>Hero Info</h1>
   <ul>
     <li>Name: <%= @specific_hero.name %></li>
     <li>Level: <%= @specific_hero.level %></li>
@@ -18,6 +19,28 @@
     <li>
       <% if @specific_hero.hero_class == "monk" && @specific_hero.gender == 0 %>
         <img src="/images/monk_male.jpg">
+      <% elsif @specific_hero.hero_class == "monk" && @specific_hero.gender == 1 %>
+        <img src="/images/monk_female.jpg">
+      <% elsif @specific_hero.hero_class == "barbarian" && @specific_hero.gender == 0 %>
+        <img src="/images/male_barb.png">
+      <% elsif @specific_hero.hero_class == "barbarian" && @specific_hero.gender == 1 %>
+        <img src="/images/female_barb.png">
+      <% elsif @specific_hero.hero_class == "crusader" && @specific_hero.gender == 0 %>
+        <img src="/images/male_crus.jpg">
+      <% elsif @specific_hero.hero_class == "crusader" && @specific_hero.gender == 1 %>
+        <img src="/images/female_crus.jpg">
+      <% elsif @specific_hero.hero_class == "wizard" && @specific_hero.gender == 0 %>
+        <img src="/images/male_wizard.jpg">
+      <% elsif @specific_hero.hero_class == "wizard" && @specific_hero.gender == 1 %>
+        <img src="/images/female_wizard.jpg">
+      <% elsif @specific_hero.hero_class == "witch-doctor" && @specific_hero.gender == 0 %>
+        <img src="/images/male_witchdoc.jpg">
+      <% elsif @specific_hero.hero_class == "witch-doctor" && @specific_hero.gender == 1 %>
+        <img src="/images/female_witchdoc.jpg">
+      <% elsif @specific_hero.hero_class == "demon-hunter" && @specific_hero.gender == 0 %>
+        <img src="/images/male_demon.jpg">
+      <% elsif @specific_hero.hero_class == "demon-hunter" && @specific_hero.gender == 1 %>
+        <img src="/images/female_demon.jpg">
       <% end %>
     </li>
   </ul>
