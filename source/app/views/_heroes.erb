@@ -1,7 +1,18 @@
 <ul>
   <h4>Here is a list of your heroes:</h4>
   <% @heroes.each do |hero| %>
-    <li>Name: <a href="/heroes/<%= hero.id %>"> <%= hero.name  %> </a></li>
+    <li>
+      <% if hero.gender == 0 && hero.hero_class == "monk" %>
+        <img src="/images/monk_male.png">
+        <% elsif hero.gender == 0 && hero.hero_class == "barbarian" %>
+        <img src="/images/barbarian_male.png">
+        <% elsif hero.gender == 0 && hero.hero_class == "witch-doctor" %>
+        <img src="/images/witchdoctor_male.png">
+        <% elsif hero.gender == 0 && hero.hero_class == "crusader" %>
+        <img src="/images/x1_crusader_male.png">
+      <% end %>
+      Name: <a href="/heroes/<%= hero.id %>"> <%= hero.name  %> </a>
+    </li>
     <ul>
       <li>Level: <%= hero.level %></li>
       <li> Gender:

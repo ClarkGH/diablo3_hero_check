@@ -1,8 +1,24 @@
 <div name='hero_attributes'>
-  <%= @specific_hero.name %>
-  <%= @specific_hero.level %>
-  <%= @specific_hero.gender %>
-  <%= @specific_hero.hero_class %>
-  <%= @specific_hero.top_item %>
-  <%= @specific_hero.top_stat %>
+  <ul>
+    <li>Name: <%= @specific_hero.name %></li>
+    <li>Level: <%= @specific_hero.level %></li>
+    <li>
+      <% if @specific_hero.gender == 0 %>
+        <%= "Gender: Male"  %>
+      <% else %>
+        <%= "Gender: Female" %>
+      <% end %>
+    </li>
+    <li>Class: <%= @specific_hero.hero_class.capitalize %></li>
+    <li>Main Hand: <%= @specific_hero.top_item %></li>
+    <li>
+      <%= @specific_hero.stat_title %>
+      <%= @specific_hero.top_stat %>
+    </li>
+    <li>
+      <% if @specific_hero.hero_class == "monk" && @specific_hero.gender == 0 %>
+        <img src="/images/monk_male.jpg">
+      <% end %>
+    </li>
+  </ul>
 </div>

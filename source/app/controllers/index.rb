@@ -40,7 +40,7 @@ def create_heroes(user, data)
       hero_class: hero_data['class'],
       top_item: parsed_json_response['items']['mainHand']['name'],
       item_url: parsed_json_response['items']['mainHand']['tooltipParams'],
-      stat_title: "Life:",
+      stat_title: "Life: ",
       top_stat: parsed_json_response['stats']['life'])
   end
 end
