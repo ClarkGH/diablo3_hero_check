@@ -1,0 +1,1 @@
+This simple single page app will consume an API and find hero info for Diablo 3
