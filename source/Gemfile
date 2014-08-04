@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
+
+# For API
+gem 'httpi'
+
+# Testing and stubbing
+
+gem 'webmock'
 
 # PostgreSQL driver
 gem 'pg'

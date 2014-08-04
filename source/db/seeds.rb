@@ -1,0 +1,1 @@
+Hero.create(name: 'EpicBeardMan')
